@@ -1,9 +1,9 @@
 <h1 style="text-align:center"> 言葉 </h1>
 
 言葉(kotoba) Is a simple and hacky kanji extractor that I wrote in the necessity of
-an app that could get kanji from songs or text and get the individual meanings
-instead of focusing on phrases.
-This is by no means a final or polished solutions, contributions are accepted,
+an app that could extract kanji from songs or texts, and get the individual meanings
+instead of focusing on the phrases.
+This is by no means a final or polished product, contributions are accepted,
 but keep in mind that this app is just a prototype
 
 <h2 style="text-align:center"> How It Works </h2>
