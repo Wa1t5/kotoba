@@ -8,7 +8,7 @@ but keep in mind that this app is just a prototype
 
 <h2 style="text-align:center"> How It Works </h2>
 I just iterate over each character in the string
-and use a regex expresison to evaluate if given char is in the kanji unicode system, then I use the jisho.org api to get the related kanji data
+and use a regex expresison to evaluate if given a character is in the kanji unicode system, then I use kanjidic and kanjivg to get kanji related data
 
 <h2 style="text-align:center"> Features </h2>
 
