@@ -27,7 +27,7 @@ and use a regex expresison to evaluate if given char is in the kanji unicode sys
 
 <h2 style="text-align:center"> Libraries </h2>
 
-* [Unofficial Jisho API(Used in previous version, maybe I'll reintegrate it later)](pub.dev/packages/unofficial_jisho_api)
+* [Unofficial Jisho API(Used in previous version, maybe I'll reintegrate it later)](https://pub.dev/packages/unofficial_jisho_api)
 * [Flutter SVG](https://pub.dev/packages/flutter_svg)
 * [Kanji Dictionary](https://pub.dev/packages/kanji_dictionary)
 * [Japanese Word Tokenizer(I'm planning to use it later)](https://pub.dev/packages/japanese_word_tokenizer)
