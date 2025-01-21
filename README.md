@@ -12,9 +12,9 @@ and use a regex expresison to evaluate if given char is in the kanji unicode sys
 
 <h2 style="text-align:center"> Screenshots </h2>
 
-![Alt text](./readme_assets/screenshot1.png)
-![Alt text](./readme_assets/screenshot2.png)
-![Alt text](./readme_assets/screenshot3.png)
+![Import music lyrics, etc](./readme_assets/screenshot1.png)
+![Kanji Grid](./readme_assets/screenshot2.png)
+![kanji Stroke Order](readme_assets/screencapture1.gif)
 
 
 <h2 style="text-align:center"> Libraries </h2>
