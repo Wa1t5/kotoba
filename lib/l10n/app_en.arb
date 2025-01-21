@@ -1,0 +1,14 @@
+{
+    "@@locale": "en",
+    "scanButton": "Scan",
+    "kanjiGridTitle": "Kanji Grid",
+    "kanjiMeanings": "Meanings",
+    "kanjiReadings": "Readings",
+    "kanjiKun": "Kun",
+    "kanjiOn": "On",
+    "kanjiGrade": "Grade",
+    "kanjiJLPTLevel": "JLPT Level",
+    "kanjiStrokeCount": "Stroke Count",
+    "kanjiDifficulty": "Difficulty",
+    "kanjiMisc": "Misc."
+}

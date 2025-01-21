@@ -1,15 +1,20 @@
 name: kotoba
-description: "A new Flutter project."
+description: "String Kanji Extractor"
 publish_to: 'none'
-version: 0.1.0
+version: 0.0.1
 
 environment:
   sdk: ^3.5.4
 
 dependencies:
+  change_app_package_name: ^1.4.0
   flutter:
     sdk: flutter
+  flutter_kanjivg: ^0.1.1
+  flutter_localizations:
+    sdk: flutter
   flutter_svg: ^2.0.9
+  intl: any
   japanese_word_tokenizer: ^0.0.3
   kanji_dictionary: ^1.0.5+1
   unofficial_jisho_api: ^3.0.0
@@ -22,3 +27,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate : true
+  assets:
+    - assets/kanjivg/kanji/

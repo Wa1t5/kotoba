@@ -1,0 +1,14 @@
+{
+    "@@locale": "pt",
+    "scanButton": "Escanear",
+    "kanjiGridTitle": "Matriz de Kanji",
+    "kanjiMeanings": "Significados",
+    "kanjiReadings": "Leituras",
+    "kanjiKun": "Kun",
+    "kanjiOn": "On",
+    "kanjiGrade": "Ensinado Na Escolaridade",
+    "kanjiJLPTLevel": "Nível JLPT",
+    "kanjiStrokeCount": "Traços",
+    "kanjiDifficulty": "Dificuldade",
+    "kanjiMisc": "Extras"
+}

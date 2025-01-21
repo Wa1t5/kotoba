@@ -19,11 +19,14 @@ and use a regex expresison to evaluate if given char is in the kanji unicode sys
 
 <h2 style="text-align:center"> Libraries </h2>
 
-* [Unofficial Jisho API](pub.dev/packages/unofficial_jisho_api)
+* [Unofficial Jisho API(Used in previous version, maybe I'll reintegrate it later)](pub.dev/packages/unofficial_jisho_api)
 * [Flutter SVG](https://pub.dev/packages/flutter_svg)
-* [Kanji Dictionary(I'm planning to use it later)](https://pub.dev/packages/kanji_dictionary)
+* [Kanji Dictionary](https://pub.dev/packages/kanji_dictionary)
 * [Japanese Word Tokenizer(I'm planning to use it later)](https://pub.dev/packages/japanese_word_tokenizer)
 * [Url launcher](https://pub.dev/packages/url_launcher)
-
+* [Flutter KanjiVG](https://pub.dev/packages/flutter_kanjivg)
+* [KanjiVG](https://kanjivg.tagaini.net/)
+* [Change App Package name](https://pub.dev/packages/change_app_package_name)
+* [KanjiDic](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project)
 
 

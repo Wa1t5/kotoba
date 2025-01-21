@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kanji_dictionary/kanji_dictionary.dart';
 import 'package:kotoba/utils/kanji_utils.utils.dart';
 import 'package:kotoba/widgets/kanji_info.widget.dart';
-
+import 'package:kotoba/main.dart';
 
 class KanjiMeaningWidget extends StatefulWidget {
   final String kanji;
@@ -13,16 +14,17 @@ class KanjiMeaningWidget extends StatefulWidget {
 }
 
 class _KanjiMeaningWidgetState extends State<KanjiMeaningWidget> {
-  dynamic kanjiInfo;
+  dynamic _kanjiInfo;
+  Language _kanjiDicLang = kanjiDicLang;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => {
-        if (kanjiInfo != null) {
-          showModalBottomSheet(showDragHandle: true, context: context, 
+        if (_kanjiInfo != null) {
+          showModalBottomSheet(showDragHandle: false, context: context, 
             builder: (context) {
-              return KanjiInfo(kanjiInfo);
+              return KanjiInfo(_kanjiInfo);
             }
           )
         }
@@ -31,14 +33,19 @@ class _KanjiMeaningWidgetState extends State<KanjiMeaningWidget> {
         constraints: BoxConstraints(minHeight: 200, minWidth: 500),
         child: FutureBuilder(future: getKanjiInfo(widget.kanji), 
         builder:(context, snapshot) {
-          if (snapshot.data != null) kanjiInfo = snapshot.data!;
+
+          if (snapshot.data != null) _kanjiInfo = snapshot.data!;
+
+          if (snapshot.data?.meanings[kanjiDicLang] == null) {
+            _kanjiDicLang = Language.english;
+          } else _kanjiDicLang = kanjiDicLang;
 
           return Card(
           color: Theme.of(context).colorScheme.secondary,
           child: Column(
             children: [
-              Text("${snapshot.data?.data?.kanji}", style: TextStyle(fontSize: 80)),
-              Text("${snapshot.data?.data?.meaning}",  style: TextStyle(fontSize: 30))
+              Text("${snapshot.data?.literal}", style: TextStyle(fontSize: 80)),
+              Text("${snapshot.data?.meanings[_kanjiDicLang]!.first}",  style: TextStyle(fontSize: 30))
             ]
           )
           );

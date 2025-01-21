@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:kanji_dictionary/kanji_dictionary.dart';
 import 'package:kotoba/routes/kanji_grid.route.dart';
 import 'package:kotoba/utils/kanji_utils.utils.dart';
+import 'package:kotoba/main.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-String textToAnalyze = "";
+
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -14,6 +17,8 @@ class MainApp extends StatelessWidget {
       theme: ThemeData.light(useMaterial3: true),
       darkTheme: ThemeData.dark(useMaterial3: true),
       themeMode: ThemeMode.system,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       home:HomeScreen()
     );
   }
@@ -36,10 +41,19 @@ class HomeScreen extends StatelessWidget {
                 textToAnalyze = value;
               }
             ),
-            ElevatedButton(child: Text("Scan"), onPressed: () {
+            ElevatedButton(child: Text(AppLocalizations.of(context)!.scanButton), onPressed: () {
+
+              // Define kanji dic language
+              if (AppLocalizations.of(context)!.localeName == "pt") {
+                kanjiDicLang = Language.portuguese;
+              } else {
+                kanjiDicLang = Language.english;
+              }
+
               Navigator.push(
                   context, 
-                  MaterialPageRoute(builder: (context) => KanjiGrid(genKanjiRow(extractKanji(textToAnalyze)))));
+                  MaterialPageRoute(builder: (context) => KanjiGrid(genKanjiRow(extractKanji(textToAnalyze))))
+              );
               }
             )
           ]
