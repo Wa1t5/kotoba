@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
 
               Navigator.push(
                   context, 
-                  MaterialPageRoute(builder: (context) => KanjiGrid(genKanjiRow(extractKanji(textToAnalyze))))
+                  MaterialPageRoute(builder: (context) => KanjiGrid(genKanjiRow(extractUniqueKanji(textToAnalyze))))
               );
               }
             )

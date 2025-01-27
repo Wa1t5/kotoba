@@ -13,6 +13,20 @@ String extractKanji(String input) {
   return kanjiCharacters;
 }
 
+String extractUniqueKanji(String input) {
+  final kanjiRegex = RegExp(r'[\u4E00-\u9FFF\u3400-\u4DBF\uF900-\uFAFF]');
+  
+  final kanjiMatches = kanjiRegex.allMatches(input);
+  
+  final kanjiCharacters = kanjiMatches
+      .map((match) => match.group(0))
+      .whereType<String>()
+      .toSet()
+      .join();
+  
+  return kanjiCharacters;
+}
+
 Future<Character> getKanjiInfo(String kanji) async {
   final kanjiDic = await KanjiDictionary.instance;
   final Character char = kanjiDic.get(kanji)!;
