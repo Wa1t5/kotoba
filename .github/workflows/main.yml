@@ -44,7 +44,7 @@ jobs:
         path: "build/windows/x64/runner/Release"
   linux:
     name: Release for linux
-    runs-on: linux-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Clone repository
       uses: actions/checkout@v4
