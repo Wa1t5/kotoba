@@ -22,7 +22,7 @@ jobs:
     - name: Release artifact
       uses: actions/upload-artifact@v4
       with:
-        name: "Kotoba Worjflow Build Artifact"
+        name: "Kotoba Build Artifact: Android"
         path: "build/app/outputs/flutter-apk/app-release.apk"
   windows:
     name: Release for windows
@@ -40,7 +40,7 @@ jobs:
     - name: Release artifact
       uses: actions/upload-artifact@v4
       with:
-        name: "Kotoba Worjflow Build Artifact"
+        name: "Kotoba Build Artifact: Windows"
         path: "build/windows/x64/runner/Release"
   linux:
     name: Release for linux
@@ -58,5 +58,5 @@ jobs:
     - name: Release artifact
       uses: actions/upload-artifact@v4
       with:
-        name: "Kotoba Worjflow Build Artifact"
+        name: "Kotoba Build Artifact: Linux"
         path: "build/linux/x64/release/bundle"
