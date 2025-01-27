@@ -6,7 +6,7 @@ on:
       main
 
 jobs:
-  build:
+  android:
     name: Release for android
     runs-on: ubuntu-latest
     steps:
@@ -24,4 +24,39 @@ jobs:
       with:
         name: "Kotoba Worjflow Build Artifact"
         path: "build/app/outputs/flutter-apk/app-release.apk"
-      
+  windows:
+    name: Release for windows
+    runs-on: windows-latest
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v4
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        channel: stable
+    - run: flutter pub get
+    - run: flutter gen-l10n
+    - run: flutter build windows
+    - name: Release artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: "Kotoba Worjflow Build Artifact"
+        path: "build/windows/runner/Release"
+  linux:
+    name: Release for linux
+    runs-on: linux-latest
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v4
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        channel: stable
+    - run: flutter pub get
+    - run: flutter gen-l10n
+    - run: flutter build windows
+    - name: Release artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: "Kotoba Worjflow Build Artifact"
+        path: "build/linux/x64/release/bundle"
