@@ -8,18 +8,26 @@ but keep in mind that this app is just a prototype
 
 <h2 style="text-align:center"> How It Works </h2>
 I just iterate over each character in the string
-and use a regex expresison to evaluate if given char is in the kanji unicode system, then I use the jisho.org api to get the related kanji data
+and use a regex expresison to evaluate if given a character is in the kanji unicode system, then I use kanjidic and kanjivg to get kanji related data
+
+<h2 style="text-align:center"> Features </h2>
+
+* Import music lyrics or any text
+* Support for portuguese and english
+* Fully offline
+* Uses KanjiDic
+* Animated kanji stroke order
 
 <h2 style="text-align:center"> Screenshots </h2>
 
 ![Import music lyrics, etc](./readme_assets/screenshot1.png)
 ![Kanji Grid](./readme_assets/screenshot2.png)
-![kanji Stroke Order](readme_assets/screencapture1.gif)
+<img src="./readme_assets/screencapture1.gif" width="287" height="650"/>
 
 
 <h2 style="text-align:center"> Libraries </h2>
 
-* [Unofficial Jisho API(Used in previous version, maybe I'll reintegrate it later)](pub.dev/packages/unofficial_jisho_api)
+* [Unofficial Jisho API(Used in previous version, maybe I'll reintegrate it later)](https://pub.dev/packages/unofficial_jisho_api)
 * [Flutter SVG](https://pub.dev/packages/flutter_svg)
 * [Kanji Dictionary](https://pub.dev/packages/kanji_dictionary)
 * [Japanese Word Tokenizer(I'm planning to use it later)](https://pub.dev/packages/japanese_word_tokenizer)

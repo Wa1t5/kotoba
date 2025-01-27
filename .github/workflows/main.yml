@@ -6,7 +6,7 @@ on:
       main
 
 jobs:
-  build:
+  android:
     name: Release for android
     runs-on: ubuntu-latest
     steps:
@@ -22,6 +22,45 @@ jobs:
     - name: Release artifact
       uses: actions/upload-artifact@v4
       with:
-        name: "Kotoba Worjflow Build Artifact"
+        name: "Kotoba Build Artifact Android"
         path: "build/app/outputs/flutter-apk/app-release.apk"
-      
+  windows:
+    name: Release for windows
+    runs-on: windows-latest
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v4
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        channel: stable
+    - run: flutter pub get
+    - run: flutter gen-l10n
+    - run: flutter build windows
+    - name: Release artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: "Kotoba Build Artifact Windows"
+        path: "build/windows/x64/runner/Release"
+  linux:
+    name: Release for linux
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v4
+    - name: Add Ninja
+      uses: seanmiddleditch/gha-setup-ninja@v5
+    - name: Install deps
+      run: sudo apt-get install -y libgtk-3-dev libgtk-3-0
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        channel: stable
+    - run: flutter pub get
+    - run: flutter gen-l10n
+    - run: flutter build linux
+    - name: Release artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: "Kotoba Build Artifact Linux"
+        path: "build/linux/x64/release/bundle"
